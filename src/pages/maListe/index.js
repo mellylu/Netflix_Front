@@ -13,7 +13,7 @@ const index = () => {
     const [movies, setMovies] = useState([]);
 
     function deleteListe (id){
-        console.log(id)
+        console.log(idElement)
         //delete moviesFavoris.favoris[favorisExist]
     }
 
@@ -55,10 +55,9 @@ const index = () => {
                                         <button onClick={() => deleteListe(element.movie._id)}>Enlever de la liste</button>
                                     }} className={styles.movies__img} src={element.movie.image}>
                                     </img>
-                                    
+                                    <button onClick={() => deleteListe(element.movie._id)}>Enlever de la liste</button>
                                 </div>
                             ))
-                            
                         }
                     </div>
                 </div>
@@ -68,6 +67,7 @@ const index = () => {
                             setIsVisible={setIsVisible} //on envoie le set pour pouvoir le modifier dans la modal
                             id_data={idElement} //envoie la valeur de l'id du film
                         >
+                            
                         </Modal>) : ""
                 }</div>
         </>
