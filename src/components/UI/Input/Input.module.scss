@@ -1,21 +1,15 @@
 .form__group {
-    margin: 20px 0px;
-    label {
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        font-size: 12px;
-        margin-bottom: 15px;
-        display: block;
-        width: 100%;
-    }
+    margin: 50px 0px;
+    width:100%;
     input {
         padding: 5px;
-        height: 40px;
-        border: 1px solid black;
+        height: 30px;
+        border-radius: 8px;
         transition: 0.3s all;
         width: 100%;
+        background-color:rgb(66, 61, 61);
         &::placeholder {
-            color: lightgray;
+            color: grey;
         }
         &:focus {
             border-width: 2px;

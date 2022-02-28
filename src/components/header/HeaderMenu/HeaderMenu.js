@@ -1,4 +1,5 @@
 import React from 'react';
+import LogoImg from "../../../../public/Netflix-logo.png";
 import Link from 'next/link';
 import styles from "./HeaderMenu.module.scss";
 
@@ -8,23 +9,16 @@ const Headermenu = () => {
             <nav>
                 <ul>
                     <li>
-                        <Link href="/">
+                        <Link href="/films">
                             <a>
-                            Home
+                            Films
                             </a>
                         </Link>
                     </li>
                     <li>
-                        <Link href="/about">
+                        <Link href="/maListe">
                             <a>
-                            About
-                            </a>
-                        </Link>
-                    </li>
-                    <li>
-                        <Link href="/shop">
-                            <a>
-                            Shop
+                            Ma liste
                             </a>
                         </Link>
                     </li>

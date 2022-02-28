@@ -1,0 +1,50 @@
+.page__home{
+    .page_assombrir{
+        filter: brightness(40%);
+    }
+    
+}
+
+
+
+.movies__img {
+    width: 200px;
+    height:130px;
+    text-align: center;
+    border-radius: 5px;
+    margin : 20px 10px 30px;
+}
+.div{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    margin-left:5%;
+    margin-right:5%;
+    margin-top:60px;
+    
+}
+.page_titre{
+    position: fixed;
+    .barreGenre{
+        opacity: 0.5;
+    }
+}
+.clickFilm{
+    width: 30%;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 99999;
+    background: black;
+    opacity:0.80;
+    border-radius: 3px;
+    h2 {
+        margin: 10% 10%;
+        color:white;
+    }
+    a{color:grey; margin-left:10%; padding:15%}
+}
+
+.clickFilm_h1{
+    color:green;
+}

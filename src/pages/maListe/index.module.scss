@@ -1,0 +1,29 @@
+.movies__img {
+    width: 200px;
+    height:130px;
+    text-align: center;
+    border-radius: 5px;
+    margin : 20px 10px 30px;
+}
+.div{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    margin-left:5%;
+    margin-right:5%;
+    margin-top:60px;
+    
+}
+
+.maliste{
+    .page_assombrir{
+        filter: brightness(40%);
+    }
+}
+
+.movies__img {
+    width: 200px;
+    height:130px;
+    text-align: center;
+    border-radius: 5px;
+    margin : 20px 10px 30px;
+}

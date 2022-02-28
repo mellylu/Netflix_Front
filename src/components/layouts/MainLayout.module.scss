@@ -1,6 +1,8 @@
 .header__main {
     display: flex;
-    justify-content: space-between;
     align-items: center;
     padding: 15px;
+    justify-content: space-between;
+    background: linear-gradient(to top, rgba(19, 18, 18, 0) 0%, rgb(0, 0, 0) 100%), 
+    //background: linear-gradient(rgb(31, 30, 30), rgb(116, 97, 97))
 }
