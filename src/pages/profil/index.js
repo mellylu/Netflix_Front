@@ -2,10 +2,10 @@ import React, { useEffect, useState } from "react";
 import Titlepage from "../../components/UI/Title/TitlePage";
 import authService from "../../services/auth.service";
 import MainLayout from '../../components/layouts/MainLayout';
-import Modal from "../../components/modalAccueil/modal";
+import Modal from "../../components/modalAccueil/ModalAccueil";
 import Input from "../../components/UI/Input/Input";
 import styles from "./index.module.scss";
-import Message from "../../components/UI/Message/Message";
+import Message from "../../components/UI/message/Message";
 const Index = () => {
 
   const [user, setUser] = useState({});

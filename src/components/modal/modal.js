@@ -5,6 +5,7 @@ import authService from "../../services/auth.service";
 import croix from "../../../public/croix.png";
 import coeur from "../../../public/coeur.png";
 import { v4 as uuidv4 } from 'uuid';
+import Image from 'next/image'
 
 const Modal = (props) => {
 
@@ -82,7 +83,7 @@ const Modal = (props) => {
                 setData(data_api.movie)
             })
             .catch((err) => console.log(err));
-    }, [])
+    }, [props.id_data])
     return (
 
 
@@ -91,10 +92,10 @@ const Modal = (props) => {
                 {
                     data ? (
                         <>
-                            <img onClick={() => props.setIsVisible(false)} className={styles.img_croix} src={croix.src} />
-                            <img onClick={() => addFavoris(data._id)} className={styles.img_coeur} src={coeur.src} />
+                            <Image onClick={() => props.setIsVisible(false)} className={styles.img_croix} src={croix.src} alt="croix" />
+                            <Image onClick={() => addFavoris(data._id)} className={styles.img_coeur} src={coeur.src} alt="coeur" />
 
-                            <img className={styles.img_film} src={data.image} />
+                            <Image className={styles.img_film} src={data.image} alt="image film"/>
 
                             <p></p>
                             <div>
@@ -103,9 +104,9 @@ const Modal = (props) => {
                             </div>
                             <div>
                                 <p className="text text-left">Genre : </p>
-                                {data.type ? (data.type.map(element => { //on met data.type ? pour que les données est le temps de charger et affiche bien
+                                {data.type ? (data.type.map(elGenre => { //on met data.type ? pour que les données est le temps de charger et affiche bien
                                     return (
-                                        <p key={uuidv4()}>{element}</p>
+                                        <p key={uuidv4()}>{elGenre}</p>
                                     )
                                 })) : ""
                                 }

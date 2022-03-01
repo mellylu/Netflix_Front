@@ -59,7 +59,7 @@ const Index = () => {
                                         <Image onClick={() => {
                                             setIdElement(element._id);
                                             setIsVisible(true);
-                                        }} className={styles.movies__img} src={element.image}>
+                                        }} className={styles.movies__img} src={element.image} alt="image Films">
                                         </Image>
                                     </div>
                                 ))
@@ -93,7 +93,7 @@ const Index = () => {
                                         <Image onClick={() => {
                                             setIdElement(element._id);
                                             setIsVisible(true);
-                                        }} className={styles.movies__img} src={element.image}>
+                                        }} className={styles.movies__img} src={element.image} alt="image Films">
                                         </Image>
                                     </div>
                                 ))

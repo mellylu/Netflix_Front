@@ -2,7 +2,7 @@ import Head from 'next/head'
 import { useRouter } from 'next/router';
 import React, { useState } from 'react';
 import HeaderLogo from '../components/header/HeaderLogo/HeaderLogo';
-import Modal from '../components/modalAccueil/Modal';
+import Modal from '../components/modalAccueil/ModalAccueil';
 import Input from "../components/UI/Input/Input";
 import styles from "./index.module.scss";
 import authService from "../services/auth.service"
@@ -77,7 +77,7 @@ export default function Home() {
             <input className="btn btn-red" width="100" type="submit" value="S'identifier" />*
             {
               error ? (
-                <Message message={errorMessage} type="error" />
+                <Message mess={errorMessage} type="error" />
               )
                 :
                 ""

@@ -5,6 +5,7 @@ import loupeRecherche from "../../../../public/loupe.png";
 import IconProfil from "../../../../public/icon-profil.jpg";
 import deconnexion from "../../../../public/déconnexion.png";
 import Input from "../../UI/Input/Input";
+import Image from 'next/image'
 
 const Headertoolbar = () => {
 
@@ -47,11 +48,13 @@ const Headertoolbar = () => {
                     ):""
                 }
             </div>
-            <img onClick={() => {barreDeRecherche()}} src={loupeRecherche.src} alt="Loupe Recherche"/>
+            <Image onClick={() => {barreDeRecherche()}} src={loupeRecherche.src} alt="Loupe Recherche"/>
             <Link href="/profil">
-                <img src={IconProfil.src} alt="icon profil"/>
+                <a>
+                <Image src={IconProfil.src} alt="icon profil"/>
+                </a>
             </Link>
-            <img onClick={() => {logout()}} src={deconnexion.src} alt="deconnexion"/>
+            <Image onClick={() => {logout()}} src={deconnexion.src} alt="deconnexion"/>
 
             </div>
 

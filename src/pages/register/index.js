@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useRouter } from "next/router";
 import authService from "../../services/auth.service"
 import Message from "../../components/UI/message/Message"
-import Modal from "../../components/modalAccueil/modal";
+import Modal from "../../components/modalAccueil/ModalAccueil";
 import Input from "../../components/UI/Input/Input";
 import styles from "./index.module.scss";
 import MainLayoutAccueil from "../../components/layouts/MainLayoutAccueil";
@@ -92,7 +92,7 @@ const Index = () => {
           <input className="btn btn-red" type="submit" value="M'inscrire" />
           {
             error ? (
-              <Message message={errorMessage} type="error" />
+              <Message mess={errorMessage} type="error" />
             )
               : //else
               ""

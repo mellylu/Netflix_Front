@@ -3,7 +3,8 @@ import Titlepage from '../../components/UI/Title/TitlePage';
 import Mainlayout from '../../components/layouts/MainLayout';
 import authService from '../../services/auth.service';
 import styles from './index.module.scss';
-import Modal from '../../components/modal/modal';
+import Modal from '../../components/modal/Modal';
+import Image from 'next/image'
 
 const Index = () => {
     const [moviesFavoris, setMoviesFavoris] = useState([]);
@@ -49,12 +50,12 @@ const Index = () => {
                         {
                             moviesFavoris.map((element) => (
                                 <div key={element._id}>
-                                    <img onClick={() => {
+                                    <Image onClick={() => {
                                         setIdElement(element.movie._id);
                                         setIsVisible(true);
                                         <button onClick={() => deleteListe(element.movie._id)}>Enlever de la liste</button>
-                                    }} className={styles.movies__img} src={element.movie.image}>
-                                    </img>
+                                    }} className={styles.movies__img} src={element.movie.image} alt="Film Liste">
+                                    </Image>
                                     <button onClick={() => deleteListe(element.movie._id)}>Enlever de la liste</button>
                                 </div>
                             ))
