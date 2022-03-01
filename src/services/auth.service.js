@@ -19,11 +19,11 @@ export default{
   //headers.append('Access-Control-Allow-Origin', 'http://localhost:3000');
 
 
-        return fetch("http://localhost:8080/api/v1/users/login", {
+        return fetch("https://ynov-netflix.herokuapp.com/api/v1/users/login", {
             method:"POST",
             headers: {
-                "content-type":"application/json"
-                //"Access-Control-Allow-Origin":"http://localhost:3000"
+                "content-type":"application/json",
+                "Access-Control-Allow-Origin":"http://localhost:3000"
 
             },
         body:JSON.stringify(user)

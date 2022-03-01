@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from "./modal.module.scss";
+import styles from "./Modal.module.scss";
 import netflixFond from "../../../public/netflix-fond.jpeg";
 
 const Modal = (props) => {

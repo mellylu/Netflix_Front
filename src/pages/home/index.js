@@ -36,6 +36,20 @@ const index = () => {
                         <MainLayout />
                         <div className={styles.page_titre} >
                             <TitlePage title="Films" />
+                            <select className={styles.barreGenre} onChange={change} value="Genre">
+                                <option value="Action">Action</option>
+                                <option value="Anime">Anime</option>
+                                <option value="Comédie">Comédie</option>
+                                <option value="Documentaire">Documentaire</option>
+                                <option value="Drame">Drame</option>
+                                <option value="Fantastique">Fantastique</option>
+                                <option value="Horreur">Horreur</option>
+                                <option value="Jeunesse et famille">Jeunesse et famille</option>
+                                <option value="Policier">Policier</option>
+                                <option value="Romance">Romance</option>
+                                <option value="Science fiction">Science fiction</option>
+                                <option value="Thriller">Thriller</option>
+                            </select>
                         </div>
                         <div className={styles.div}>
                             {
