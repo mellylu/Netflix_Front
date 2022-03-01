@@ -6,7 +6,7 @@ import Modal from "../../components/modalAccueil/modal";
 import Input from "../../components/UI/Input/Input";
 import styles from "./index.module.scss";
 import Message from "../../components/UI/Message/Message";
-const index = () => {
+const Index = () => {
 
   const [user, setUser] = useState({});
   const [success, setSuccess] = useState(false);
@@ -84,4 +84,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default Index;

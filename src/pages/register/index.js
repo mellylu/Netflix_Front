@@ -7,7 +7,7 @@ import Input from "../../components/UI/Input/Input";
 import styles from "./index.module.scss";
 import MainLayoutAccueil from "../../components/layouts/MainLayoutAccueil";
 
-const index = () => {
+const Index = () => {
   const router = useRouter();
   const [user, setUser] = useState({});//objet qui prend les propriétés des inputs, affecter chaque valeur des inputs sur le onChange
   const [error, setError] = useState(false);//rendre réactif la data le state permet de l'utiliser dans la div
@@ -104,4 +104,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default Index;

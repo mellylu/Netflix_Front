@@ -5,7 +5,7 @@ import authService from '../../services/auth.service';
 import styles from './index.module.scss';
 import Modal from '../../components/modal/modal';
 
-const index = () => {
+const Index = () => {
     const [moviesFavoris, setMoviesFavoris] = useState([]);
     
     const [idElement, setIdElement] = useState();
@@ -77,4 +77,4 @@ const index = () => {
 
 
 
-export default index;
+export default Index;

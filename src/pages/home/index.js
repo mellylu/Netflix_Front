@@ -3,9 +3,9 @@ import MainLayout from '../../components/layouts/MainLayout';
 import TitlePage from '../../components/UI/Title/TitlePage';
 import styles from './index.module.scss'
 import authService from '../../services/auth.service';
-import Modal from '../../components/modal/modal';
+import Modal from '../../components/modal/Modal';
 
-const index = () => {
+const Index = () => {
     const [movies, setMovies] = useState([]);
     const [idElement, setIdElement] = useState();
     const [isVisible, setIsVisible] = useState(false);
@@ -116,6 +116,6 @@ const index = () => {
     );
 };
 
-export default index;
+export default Index;
 
 
