@@ -12,7 +12,7 @@ const Message = (props) => {
     }
     return (
         <div className={renderClass()}>
-            {props.message}
+            {props.mess}
         </div>
     );
 }

@@ -9,7 +9,7 @@ const Headermenu = () => {
             <nav>
                 <ul>
                     <li>
-                        <Link href="/films">
+                        <Link href="/home">
                             <a>
                             Films
                             </a>

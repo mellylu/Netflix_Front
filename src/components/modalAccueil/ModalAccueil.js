@@ -7,7 +7,7 @@ const ModalAccueil = (props) => {
     return (
         <>
         <div className={Styles.overlay}></div>
-        <Image className={Styles.modal_imageFond} src={NetflixFond.src} alt="Netflix Fond"></Image>
+        <Image className={Styles.modal_imageFond} src={NetflixFond} alt="Netflix Fond" layout='fill'></Image>
         <div className={Styles.modal}>
             <h2>{props.title}</h2>
             {props.children}

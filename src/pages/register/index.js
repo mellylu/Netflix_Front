@@ -18,7 +18,8 @@ const Index = () => {
     authService.register(user)
       .then(data => {
         console.log(data);
-        if (data.message) {
+        if (data.success == false) {
+          console.log(data);
           setError(true);
           setErrorMessage(data.message)
           return false;

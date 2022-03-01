@@ -48,13 +48,13 @@ const Headertoolbar = () => {
                     ):""
                 }
             </div>
-            <Image onClick={() => {barreDeRecherche()}} src={loupeRecherche.src} alt="Loupe Recherche"/>
+            <img onClick={() => {barreDeRecherche()}} src={loupeRecherche.src} alt="Loupe Recherche" />
             <Link href="/profil">
                 <a>
-                <Image src={IconProfil.src} alt="icon profil"/>
+                <img src={IconProfil.src} alt="icon profil" />
                 </a>
             </Link>
-            <Image onClick={() => {logout()}} src={deconnexion.src} alt="deconnexion"/>
+            <img onClick={() => {logout()}} src={deconnexion.src} alt="deconnexion" />
 
             </div>
 

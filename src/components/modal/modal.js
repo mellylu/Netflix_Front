@@ -5,7 +5,6 @@ import authService from "../../services/auth.service";
 import croix from "../../../public/croix.png";
 import coeur from "../../../public/coeur.png";
 import { v4 as uuidv4 } from 'uuid';
-import Image from 'next/image'
 
 const Modal = (props) => {
 
@@ -17,6 +16,7 @@ const Modal = (props) => {
         const token = localStorage.getItem('token')
         const user = await authService.getUser(token)
         var index = 0;
+        console.log(user)
         let favorisExist = user.favoris.findIndex(
             (el) => {
                 if (el.movie._id === id){
@@ -31,21 +31,18 @@ const Modal = (props) => {
 
         }
         else {
-            
-            user.favoris.filter((element) => {
+            let newFavoris = []
+            user.favoris.forEach(favoris => {
                 console.log(user)
-                return element._id !== user.favoris[favorisExist]._id
-            });
                 
-
-            
-            
-            console.log(user.favoris)
-            // delete user.favoris[favorisExist]
-            // console.log(user.favoris)
+                if (favoris.movie._id !== id){
+                    newFavoris.push(favoris);
+                }
+            })
+            user.favoris = newFavoris;
 
         }
-        console.log(user.favoris)
+        console.log(user)
         authService.updateUser(token, user)
             .then(dataFavoris => {
                 if (dataFavoris.update == true) {
@@ -53,25 +50,6 @@ const Modal = (props) => {
                 }
             })
             .catch((err) => console.log(err));
-    
-
-
-        // while (user.favoris[index]) {
-        //     if ({ movie: id }.movie != user.favoris[index].movie) {
-        //         console.log('DANS LE IF')
-        //         user.favoris.push({ movie: id })
-        //         authService.updateUser(token, user)
-        //             .then(dataFavoris => {
-        //                 if (dataFavoris.update == true) {
-        //                     dataFavoris.user.favoris.push({ movie: id })
-        //                     setData(dataFavoris.user)
-        //                 }
-        //             })
-        //             .catch((err) => console.log(err));
-        //         }
-                
-        //     index++;
-        // }
     }
 
     useEffect(() => {
@@ -92,10 +70,8 @@ const Modal = (props) => {
                 {
                     data ? (
                         <>
-                            <Image onClick={() => props.setIsVisible(false)} className={styles.img_croix} src={croix.src} alt="croix" />
-                            <Image onClick={() => addFavoris(data._id)} className={styles.img_coeur} src={coeur.src} alt="coeur" />
-
-                            <Image className={styles.img_film} src={data.image} alt="image film"/>
+                            <img onClick={() => props.setIsVisible(false)} className={styles.img_croix} src={croix.src} alt="croix" />
+                            <img className={styles.img_film} src={data.image} alt="image film" />
 
                             <p></p>
                             <div>
@@ -110,6 +86,7 @@ const Modal = (props) => {
                                     )
                                 })) : ""
                                 }
+                                <img onClick={() => addFavoris(data._id)} className={styles.img_coeur} src={coeur.src} alt="coeur" />
                             </div>
 
 

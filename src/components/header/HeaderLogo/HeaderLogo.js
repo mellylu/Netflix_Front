@@ -1,12 +1,18 @@
 import React from 'react';
-import LogoImg from "../../../../public/Netflix-logo.png";
 import styles from "./HeaderLogo.module.scss";
 import Image from 'next/image'
+import Logo from "../../../../public/Netflix-logo.png";
 
 const Headerlogo = () => {
     return (
         <div className={styles.header__logo}>
-            <Image src={LogoImg.src} alt="Netflix Logo"/>
+            <Image
+    src={Logo}
+    alt=""
+    layout="responsive"
+    className={styles.logo}
+/>
+           
         </div>
     );
 }

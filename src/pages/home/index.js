@@ -4,7 +4,6 @@ import TitlePage from '../../components/UI/Title/TitlePage';
 import styles from './index.module.scss'
 import authService from '../../services/auth.service';
 import Modal from '../../components/modal/modal';
-import Image from 'next/image'
 
 const Index = () => {
     const [movies, setMovies] = useState([]);
@@ -56,11 +55,11 @@ const Index = () => {
                             {
                                 movies.map((element) => (
                                     <div key={element._id}>
-                                        <Image onClick={() => {
+                                        <img onClick={() => {
                                             setIdElement(element._id);
                                             setIsVisible(true);
                                         }} className={styles.movies__img} src={element.image} alt="image Films">
-                                        </Image>
+                                        </img>
                                     </div>
                                 ))
                             }
@@ -90,11 +89,11 @@ const Index = () => {
                             {
                                 movies.map((element) => (
                                     <div key={element._id}>
-                                        <Image onClick={() => {
+                                        <img onClick={() => {
                                             setIdElement(element._id);
                                             setIsVisible(true);
-                                        }} className={styles.movies__img} src={element.image} alt="image Films">
-                                        </Image>
+                                        }} className={styles.movies__img} src={element.image} alt="image Films" layout="fill">
+                                        </img>
                                     </div>
                                 ))
                             }
