@@ -15,7 +15,6 @@ const Index = () => {
 
     function deleteListe (id){
         console.log(idElement)
-        //delete moviesFavoris.favoris[favorisExist]
     }
 
     useEffect(() => {
