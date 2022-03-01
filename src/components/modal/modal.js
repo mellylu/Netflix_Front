@@ -4,6 +4,7 @@ import React, { useState, useEffect } from 'react';
 import authService from "../../services/auth.service";
 import croix from "../../../public/croix.png";
 import coeur from "../../../public/coeur.png";
+import { v4 as uuidv4 } from 'uuid';
 
 const Modal = (props) => {
 
@@ -104,7 +105,7 @@ const Modal = (props) => {
                                 <p className="text text-left">Genre : </p>
                                 {data.type ? (data.type.map(element => { //on met data.type ? pour que les données est le temps de charger et affiche bien
                                     return (
-                                        <p>{element}</p>
+                                        <p key={uuidv4()}>{element}</p>
                                     )
                                 })) : ""
                                 }

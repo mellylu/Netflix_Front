@@ -2,7 +2,7 @@ import Head from 'next/head'
 import { useRouter } from 'next/router';
 import React, { useState } from 'react';
 import HeaderLogo from '../components/header/HeaderLogo/HeaderLogo';
-import Modal from '../components/modalAccueil/modal';
+import Modal from '../components/modalAccueil/Modal';
 import Input from "../components/UI/Input/Input";
 import styles from "./index.module.scss";
 import authService from "../services/auth.service"
