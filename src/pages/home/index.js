@@ -3,7 +3,7 @@ import MainLayout from '../../components/layouts/MainLayout';
 import TitlePage from '../../components/UI/Title/TitlePage';
 import styles from './index.module.scss'
 import authService from '../../services/auth.service';
-import Modal from '../../components/modal/Modal';
+import Modal from '../../components/modal/modal';
 import Image from 'next/image'
 
 const Index = () => {
