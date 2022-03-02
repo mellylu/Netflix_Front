@@ -19,7 +19,7 @@ export default{
   //headers.append('Access-Control-Allow-Origin', 'http://localhost:3000');
 
 
-        return fetch("https://netflixbackynov.herokuapp.com/api/v1/users/login", {
+        return fetch("http://localhost:8080/api/v1/users/login", {
             method:"POST",
             headers: {
                 "content-type":"application/json"
@@ -30,7 +30,7 @@ export default{
         }).then((res) => res.json())
     },
     getMovies(token){
-            return fetch('https://netflixbackynov.herokuapp.com/api/v1/movies/', {
+            return fetch('http://localhost:8080/api/v1/movies/', {
                 headers: {
                     "authorization":token,
                     "content-type":"application/json"
@@ -39,7 +39,7 @@ export default{
             .then(res => res.json())
     },
     getMovie(id, token) {;
-        return fetch('https://netflixbackynov.herokuapp.com/api/v1/movies/' + id, {
+        return fetch('http://localhost:8080/api/v1/movies/' + id, {
             headers: {
                 "authorization":token,
                 "content-type":"application/json"
@@ -48,7 +48,7 @@ export default{
         .then(res => res.json())
 },
     getUser(token) {
-        return fetch('https://netflixbackynov.herokuapp.com/api/v1/users/get-user', {
+        return fetch('http://localhost:8080/api/v1/users/get-user', {
             headers: {
                 "authorization":token
             }
@@ -56,7 +56,7 @@ export default{
         .then(res => res.json())
     },
     getUsers(token) {
-        return fetch('https://netflixbackynov.herokuapp.com/api/v1/users/', {
+        return fetch('http://localhost:8080/api/v1/users/', {
             headers: {
                 "authorization":token,
                 "content-type":"application/json"
@@ -69,7 +69,7 @@ export default{
 
     updateUser(token, user) {
         var decoded = jwt_decode(token);
-        return fetch('https://netflixbackynov.herokuapp.com/api/v1/users/'+ decoded.id, {
+        return fetch('http://localhost:8080/api/v1/users/'+ decoded.id, {
             method: "PUT",
             headers: {
                 "authorization": token,
@@ -80,7 +80,7 @@ export default{
         .then(res => res.json())
     },
     verifyToken(token) {
-        return fetch('https://netflixbackynov.herokuapp.com/api/v1/users/verifytoken', {
+        return fetch('http://localhost:8080/api/v1/users/verifytoken', {
             headers: {
                 "authorization":token
             }
