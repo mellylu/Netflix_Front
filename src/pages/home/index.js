@@ -89,12 +89,15 @@ const Index = () => {
                             {
                                 movies.map((element) => (
                                     <div key={element._id}>
+                                        {console.log(element)}
                                         <img onClick={() => {
                                             setIdElement(element._id);
                                             setIsVisible(true);
                                         }} className={styles.movies__img} src={element.image} alt="image Films" layout="fill">
                                         </img>
                                     </div>
+                                    
+                                
                                 ))
                             }
                         </div>

@@ -7,11 +7,11 @@ const Headerlogo = () => {
     return (
         <div className={styles.header__logo}>
             <Image
-    src={Logo}
-    alt=""
-    layout="responsive"
-    className={styles.logo}
-/>
+                src={Logo}
+                alt=""
+                layout="responsive"
+                className={styles.logo}
+            />
            
         </div>
     );

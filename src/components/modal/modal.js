@@ -16,7 +16,6 @@ const Modal = (props) => {
         const token = localStorage.getItem('token')
         const user = await authService.getUser(token)
         var index = 0;
-        console.log(user)
         let favorisExist = user.favoris.findIndex(
             (el) => {
                 if (el.movie._id === id){
@@ -24,16 +23,13 @@ const Modal = (props) => {
                 }
             }
         );
-        console.log(favorisExist);
         if (favorisExist === -1){
             user.favoris.push({ movie: id })
-            
-
         }
+        
         else {
             let newFavoris = []
             user.favoris.forEach(favoris => {
-                console.log(user)
                 
                 if (favoris.movie._id !== id){
                     newFavoris.push(favoris);
@@ -42,7 +38,6 @@ const Modal = (props) => {
             user.favoris = newFavoris;
 
         }
-        console.log(user)
         authService.updateUser(token, user)
             .then(dataFavoris => {
                 if (dataFavoris.update == true) {
@@ -62,6 +57,7 @@ const Modal = (props) => {
             })
             .catch((err) => console.log(err));
     }, [props.id_data])
+
     return (
 
 
